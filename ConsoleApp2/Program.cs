@@ -13,7 +13,7 @@ namespace Giraffe
         //the code will read line by line, so the order matters a lot
         static void Main(string[] args)
         {
-            UserInput();
+            Methods();
         }
 
         static void Variables()
@@ -109,6 +109,69 @@ namespace Giraffe
             Console.WriteLine("Hello " + name + " you are " + age);
 
             Console.ReadLine();
+
+        }
+        static void CalculatorGame()
+        {
+            //to convert a string into a number do the following below
+            //int num =   Convert.ToInt32("45");
+            
+            Console.WriteLine("Enter a number:");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter another number:");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(num1 + num2);
+
+            Console.ReadLine();
+
+        }
+        static void MadLibs()
+        {
+            string color, pluralNoun, favoriteThings;
+
+            Console.Write("Enter a color:");
+            color = Console.ReadLine();
+            Console.Write("Enter a Plural Noun:");
+            pluralNoun = Console.ReadLine();
+            Console.Write("Enter your favorite thing:");
+            favoriteThings = Console.ReadLine();
+            //a $ allows use to better use variables in console.writeline
+            Console.WriteLine($"Roses are {color}");
+            Console.WriteLine($"{pluralNoun} are blue");
+            Console.WriteLine($"I love {favoriteThings}");
+
+            Console.ReadLine();
+        }
+        static void Arrays()
+        {
+            //variables can only store 1 value
+            //arrays can store multiple, think of it lie a collevtion of multiple values of the same type
+            //remember that all indexes start with 0
+            int[] luckyNumbers = { 14, 7, 13, 65, 36, 2};
+            
+            //if unsure of what to put into an array write it like below
+            string[] friends = new string[5];
+            //this way you can add strings up to the number inside the brackets, remember indexs start at 0
+            //add to the array by doing whats below
+            friends[0] = "Morgan";
+            friends[1] = "Duane";
+            friends[2] = "Lara";
+            friends[3] = "Andrew";
+            friends[4] = "KJ";
+            friends[5] = "Tifa";
+
+            //to change what's inside a variable do the following
+            luckyNumbers[1] = 15;
+            //the above has changed what would've been 7 into 15
+            //[5] will print out 2
+            Console.WriteLine(luckyNumbers[1]);
+
+            Console.ReadLine();
+
+        }
+        static void Methods()
+        {
 
         }
     }
