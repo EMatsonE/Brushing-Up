@@ -13,7 +13,7 @@ namespace Giraffe
         //the code will read line by line, so the order matters a lot
         static void Main(string[] args)
         {
-            Methods();
+            ReturnStatements();
         }
 
         static void Variables()
@@ -172,7 +172,32 @@ namespace Giraffe
         }
         static void Methods()
         {
+            //methods are a block of code that can preform a specific task
+            SayHi("Didgy", 27);
+            Console.ReadLine();
+        }
+        //Here is how you properlly call a method
+        //Methods should have about 5-10 lines of code
+        //parameters are values that are passed fdrom method to the next
+        static void SayHi(string name, int age)
+        {
+            Console.WriteLine($"Hello {name} you are {age}");
+        }
+        static void ReturnStatements()
+        {
+            //Cube(5) will not print out to console. It will run, you just won't see the result
+            //Console.WriteLine(Cube(5)); is how to have it print properly
+            double cubedNumber = Cube(5);
+            Console.WriteLine(cubedNumber);
 
+            Console.ReadLine();
+        }
+        //void means it won't return any information
+        static double Cube(int num)
+        {
+            int resolve = num * num * num;
+            //return means it will give a piece of information bac to the caller
+            return resolve;
         }
     }
 }
