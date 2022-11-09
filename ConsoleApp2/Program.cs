@@ -13,9 +13,16 @@ namespace Giraffe
         //the code will read line by line, so the order matters a lot
         static void Main(string[] args)
         {
-            ReturnStatements();
+            Greeting();
         }
+        static void Greeting()
+        {
+            Console.WriteLine("Hello! What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Nice to meet you {name}");
 
+            Console.ReadLine();
+        }
         static void Variables()
         {
             //variables are amazing because they can store a specific data value we can use at any time
